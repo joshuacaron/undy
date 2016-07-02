@@ -1,4 +1,4 @@
-undy.js
+undy [![Build Status](https://travis-ci.org/joshuacaron/undy.svg?branch=master)](https://travis-ci.org/joshuacaron/undy)
 =======
 
 undy is a small Javascript library to enable better handling for undefined values in deeply nested objects, similar to the null-conditional operator in other languages such as C#. This lets you write what you mean, and deal with undefined values only at the end instead of constantly checking for undefined values at every level of your object.
