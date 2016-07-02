@@ -263,7 +263,8 @@
     "es6": true,
     "browser": true,
     "commonjs": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": ["eslint:recommended"],
   "parserOptions": {
