@@ -1,9 +1,9 @@
 undy.js
-#######
+=======
 
 undy is a small Javascript library to enable better handling for undefined values in deeply nested objects, similar to the null-conditional operator in other languages such as C#. This lets you write what you mean, and deal with undefined values only at the end instead of constantly checking for undefined values at every level of your object.
 
-undy comprises of a single function that wraps your variable in a Proxy. All values retrieved from the new object are similarly wrapped. Call `.value` to retrieve your raw object back at any point in the chain.
+undy two functions: one that wraps your variable with `undy(variable)` to change their nested undefined behaviour, and the other to configure the property to get your value out, with `undy.configure(newValue)`. All values retrieved from the new object are similarly wrapped. Call `.value`, or whatever you set in `undy.configure(newValue)` to retrieve your raw object back at any point in the chain.
 
 Get Started
 -----------
