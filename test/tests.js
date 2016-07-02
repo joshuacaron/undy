@@ -1,5 +1,5 @@
 import assert from 'assert'
-import undy from '../index.js'
+import undy, {configure} from '../index.js'
 
 describe('undy', () => {
   it('should return the original value if calling .value immediately', () => {
@@ -44,5 +44,30 @@ describe('undy', () => {
 
     assert.equal('testing', wrapped.a.value)
     assert.equal('testing', x.a)
+  })
+})
+
+describe('undy.configure', () => {
+  it('should change .value to whatever is set in configure', () => {
+    let x = {a: 'b', value: 'hello'}
+
+    const unWrap = Symbol.for('undy')
+
+    configure(unWrap)
+
+    assert.equal(x, undy(x)[unWrap])
+    assert.equal('b', undy(x).a[unWrap])
+    assert.equal(undefined, undy(x).b.a[unWrap])
+  })
+
+  it('should not bind on .value once changed', () => {
+    let x = {a: 'b', value: 'hello'}
+
+    const unWrap = Symbol.for('undy')
+
+    configure(unWrap)
+
+    assert.equal('hello', undy(x).value[unWrap])
+    assert.equal(undefined, undy(x).a.value[unWrap])
   })
 })

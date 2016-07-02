@@ -12,7 +12,7 @@ To install run `npm install undy`.
 
 Include it in your project and use it as follows:
 
-    import undy from 'undy'
+    import undy, {configure} from 'undy'
 
     var a = {b: {c: {d: 'e'}}}
 
@@ -32,6 +32,12 @@ Include it in your project and use it as follows:
     val = primitive.a.value // undefined
     val = primitive.a.b.c.value // undefined
     val = primitive.value // 'hello'
+
+    // Change .value to anything you want by calling configure
+    const unWrap = Symbol.for('undy')
+    configure(unWrap)
+    val = undy(a).b.c.d[unWrap] // 'e'
+    val = undy(a).z[unWrap] // undefined
 
 Compatability
 -------------
