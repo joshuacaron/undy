@@ -5,9 +5,9 @@
   "main": "es5.js",
   "jsnext:main": "build.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register",
     "build": "./node_modules/.bin/babel index.js -o build.js ",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
   },
   "keywords": [
     "undefined",
