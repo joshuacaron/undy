@@ -1,6 +1,6 @@
 {
   "name": "undy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Better error handling for undefined values in nested objects.",
   "main": "es5.js",
   "jsnext:main": "build.js",
@@ -20,7 +20,7 @@
     "nested object retrieval",
     "nested"
   ],
-  "author": "Joshua Caron <joshua@joshuacaron.ca>",
+  "author": "nv5x9k93 <nv5x9k93@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.10.1",
